@@ -38,16 +38,18 @@ end
 if true then
 USERID = game.Players.LocalPlayer.Name
 if
-USERID == "Darkolympus" or
+USERID == "G4EYT" or
 USERID == "Username2" or
 USERID == "Username3"
-
 then
-game:GetService("UserInputService").InputBegan:connect(function(inputObject,gameProcessedEvent)
-       if inputObject.KeyCode == Enum.KeyCode.W then
-           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
+    game:GetService("UserInputService").InputBegan:connect(function(inputObject,gameProcessedEvent)
+           if inputObject.KeyCode == Enum.KeyCode.W then
+               game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60
        end
    end)
+else
+    game.Players.LocalPlayer:Kick("You Haven't Been Whitelisted, Dm Orgin#9346 To Be Whitelisted.")
+end
     print("[Alpha X]: Authenticated!")
 end
 
@@ -111,7 +113,7 @@ end);
 local theme = venyx:addPage("Themes", 5012544693)
 local colors = theme:addSection("Colors")
 
-for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+for theme, color in pairs(themes) do 
 	colors:addColorPicker(theme, color, function(color3)
 		venyx:setTheme(theme, color3)
 	end)
